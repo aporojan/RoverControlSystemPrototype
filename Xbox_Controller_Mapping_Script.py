@@ -1,5 +1,5 @@
 
-# main controller input program
+# Xbox controller mapping script
 
 """
 Requirements:
@@ -25,7 +25,6 @@ Socket library documentation:
 
 from math import ceil
 import pygame
-import socket
 
 # Define constants
 BLACK = pygame.Color('black')
