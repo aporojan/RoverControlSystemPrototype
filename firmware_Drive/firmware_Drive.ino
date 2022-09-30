@@ -29,6 +29,10 @@ ARM PINS
 *above notes duplicated in firmware_Arm.ino
 */
 
+// #include <NativeEthernet.h>
+// #include <NativeEthernetTcp.h>
+#include <Servo.h>
+
 const byte leftWheel1 = 11, leftWheel2 = 12, leftWheel3 = 24, 
 			rightWheel1 = 25, rightWheel2 = 28, rightWheel3 = 29, 
 			LEDRedValue = 33, LEDBlueValue = 34, LEDGreenValue = 35;
@@ -38,3 +42,14 @@ const byte upperExtender = 24, lowerExtender = 29, hoist = 25,
 
 const uint16_t port = 8090;
 const char * host = "192.168.1.83";
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}
