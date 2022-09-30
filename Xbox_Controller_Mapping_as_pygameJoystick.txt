@@ -1,5 +1,6 @@
 Xbox Series X Controller Mapping
-using pygame.Joystick.controller object
+using Xbox_Controller_Mapping_Script.py
+as a pygame.Joystick.controller object
 
 LS down		Axis1: 0 to 1
 LS up		Axis1: 0 to -1
@@ -8,8 +9,8 @@ LS right	Axis0: 0 to 1
 
 RS down		Axis3: 0 to 1
 RS up		Axis3: 0 to -1
-RS left		Axis0: 2 to -1
-RS right	Axis0: 0 to 1
+RS left		Axis2: 2 to -1
+RS right	Axis2: 0 to 1
 
 LT released	Axis4: -1
 LT pressed	Axis4: 1
