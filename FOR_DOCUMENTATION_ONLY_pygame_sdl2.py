@@ -2,7 +2,6 @@
 # main controller input program
 
 """
-
 Requirements:
 	use pygame library to take controller input
 	all motors on the rover must be independently controllable:
@@ -19,10 +18,8 @@ Strict format for sending drive and arm command packets:
 Pygame library XBOX example code:
 	https://www.pygame.org/docs/ref/XBOX.html#module-pygame.XBOX
 
-Socket library example code:
-
 """
-import socket
+
 from math import ceil
 import pygame
 import pygame._sdl2
@@ -66,7 +63,7 @@ class TextPrint(object):
 		self.x -= 10
 
 def CtrlRead(controller_num):
-	global textPrint, pygame
+	global textPrint, XBOX
 
 	XBOX = pygame._sdl2.controller.Controller(controller_num)
 	XBOX.init()
@@ -148,8 +145,6 @@ while not done:
 				# Prompt user to continue or exit maybe?
 				done = True
 				continue
-		# event.type == pygame.JOYBUTTONDOWN: Controller button pressed
-		# event.type == pygame.JOYBUTTONUP: Controller button released
 
 	# Check to see if it's time to draw another frame
 	frame_time += clock.tick()
